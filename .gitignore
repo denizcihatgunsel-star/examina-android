@@ -1,0 +1,11 @@
+node_modules/
+.expo/
+dist/
+android/
+ios/
+*.jks
+*.apk
+*.aab
+.env
+.DS_Store
+npm-debug.*
