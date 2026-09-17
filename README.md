@@ -3,6 +3,12 @@
 Headway-inspired Android client for **Examina**.  
 **Does not modify** [www.examina.ink](https://www.examina.ink) — Create/Generate opens the live site in a WebView.
 
+## Install
+
+Download the latest APK from `artifacts/examina-v1.0.1.apk` and install on your Android device.
+
+**Note:** You may need to enable "Install from Unknown Sources" in your device settings.
+
 ## Run
 ```bash
 npm install
@@ -11,7 +17,9 @@ npx expo start
 
 ## Build APK (local)
 ```bash
-npx expo prebuild --platform android
+npm install
+npx expo prebuild --platform android --clean
+export ANDROID_HOME=~/android-sdk
 cd android && ./gradlew assembleRelease
 # APK: android/app/build/outputs/apk/release/app-release.apk
 ```
