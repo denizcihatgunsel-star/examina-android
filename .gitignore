@@ -9,3 +9,6 @@ ios/
 .env
 .DS_Store
 npm-debug.*
+
+# Allow APK artifacts
+!artifacts/*.apk
