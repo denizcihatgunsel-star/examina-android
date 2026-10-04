@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Pressable, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -10,9 +10,7 @@ export default function ForYouScreen() {
     <SafeAreaView style={styles.safe} edges={['top']}>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={styles.brandRow}>
-          <View style={styles.logoMark}>
-            <Text style={styles.logoMarkText}>E</Text>
-          </View>
+          <Image source={require('@/assets/logo-small.png')} style={styles.logoMark} />
           <Text style={styles.brand}>Examina</Text>
         </View>
 
@@ -83,8 +81,7 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.bg },
   scroll: { paddingBottom: 28 },
   brandRow: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingHorizontal: 20, paddingTop: 12, paddingBottom: 18 },
-  logoMark: { width: 32, height: 32, borderRadius: 10, backgroundColor: colors.ink, alignItems: 'center', justifyContent: 'center' },
-  logoMarkText: { color: '#fff', fontWeight: '800', fontSize: 16 },
+  logoMark: { width: 32, height: 32 },
   brand: { fontSize: 24, fontWeight: '800', color: colors.ink },
   statsCard: { marginHorizontal: 20, backgroundColor: colors.card, borderRadius: 20, padding: 18, borderWidth: 1, borderColor: colors.border, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.04, shadowRadius: 8, elevation: 2 },
   statsTop: { flexDirection: 'row', gap: 12, marginBottom: 14 },
